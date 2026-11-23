@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+    <linearGradient id="shroud" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A"/>
+      <stop offset="50%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="fan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3F3F46"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#bg)"/>
+  <rect x="15" y="15" width="370" height="370" rx="20" fill="none" stroke="#262626" stroke-width="1.5" stroke-dasharray="6,6"/>
+  
+  <g filter="url(#shadow)">
+    <!-- Main GPU Shroud -->
+    <rect x="40" y="100" width="320" height="200" rx="16" fill="url(#shroud)" stroke="#52525B" stroke-width="2"/>
+    
+    <!-- PCIe Gold Finger Connector at bottom -->
+    <rect x="70" y="300" width="180" height="14" rx="2" fill="#EAB308" stroke="#CA8A04" stroke-width="1"/>
+    <line x1="120" y1="300" x2="120" y2="314" stroke="#713F12" stroke-width="2"/>
+    <line x1="180" y1="300" x2="180" y2="314" stroke="#713F12" stroke-width="2"/>
+    
+    <!-- Metal Backplate Accent Lines -->
+    <path d="M 50 120 L 350 120" stroke="#F59E0B" stroke-width="2" opacity="0.8"/>
+    <path d="M 50 280 L 350 280" stroke="#3F3F46" stroke-width="1"/>
+    
+    <!-- Dual / Triple Axial Fans -->
+    <!-- Fan 1 -->
+    <circle cx="115" cy="200" r="54" fill="#09090B" stroke="#3F3F46" stroke-width="2"/>
+    <circle cx="115" cy="200" r="46" fill="url(#fan)"/>
+    <circle cx="115" cy="200" r="16" fill="#18181B" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="115" cy="200" r="4" fill="#F59E0B"/>
+    
+    <!-- Fan 2 -->
+    <circle cx="285" cy="200" r="54" fill="#09090B" stroke="#3F3F46" stroke-width="2"/>
+    <circle cx="285" cy="200" r="46" fill="url(#fan)"/>
+    <circle cx="285" cy="200" r="16" fill="#18181B" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="285" cy="200" r="4" fill="#F59E0B"/>
+
+    <!-- Center Bridge Badge -->
+    <rect x="175" y="165" width="50" height="70" rx="8" fill="#18181B" stroke="#3F3F46" stroke-width="1.5"/>
+    <text x="200" y="195" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle">ASUS</text>
+    <rect x="185" y="206" width="30" height="4" rx="2" fill="#F59E0B"/>
+
+    <!-- Top Shroud Logo Plate -->
+    <rect x="55" y="108" width="130" height="20" rx="4" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <text x="120" y="122" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="10" fill="#E2E8F0" text-anchor="middle">ASUS ROG Strix GeForce...</text>
+    
+    <!-- Power Header (16-pin 12V-2x6) -->
+    <rect x="290" y="94" width="36" height="12" rx="3" fill="#09090B" stroke="#71717A" stroke-width="1"/>
+  </g>
+  
+  <rect x="25" y="348" width="120" height="22" rx="6" fill="#18181B" stroke="#3F3F46" stroke-width="1"/>
+  <text x="85" y="363" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="10" fill="#F59E0B" text-anchor="middle">24GB GDDR6X</text>
+</svg>

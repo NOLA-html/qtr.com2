@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="radiator" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3F3F46"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#bg)"/>
+  
+  <g filter="url(#shadow)">
+    <!-- Liquid Cooler Pump Block -->
+    <circle cx="120" cy="240" r="48" fill="#18181B" stroke="#52525B" stroke-width="3"/>
+    <circle cx="120" cy="240" r="40" fill="#09090B" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="120" cy="240" r="24" fill="#000000"/>
+    <text x="120" y="244" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="10" fill="#FFFFFF" text-anchor="middle">ARCTIC</text>
+    
+    <!-- Braided Sleeved Tubes -->
+    <path d="M 155 215 C 200 180, 220 150, 260 120" fill="none" stroke="#27272A" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 155 215 C 200 180, 220 150, 260 120" fill="none" stroke="#52525B" stroke-width="2" stroke-dasharray="3,3"/>
+
+    <path d="M 145 255 C 220 220, 240 180, 280 130" fill="none" stroke="#18181B" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 145 255 C 220 220, 240 180, 280 130" fill="none" stroke="#3F3F46" stroke-width="2" stroke-dasharray="3,3"/>
+
+    <!-- High-Density Radiator Stack with Dual Fans -->
+    <rect x="230" y="60" width="130" height="260" rx="12" fill="url(#radiator)" stroke="#52525B" stroke-width="2"/>
+    
+    <!-- Radiator Fan 1 -->
+    <circle cx="295" cy="130" r="48" fill="#09090B" stroke="#3F3F46" stroke-width="2"/>
+    <circle cx="295" cy="130" r="14" fill="#18181B" stroke="#F59E0B" stroke-width="2"/>
+    
+    <!-- Radiator Fan 2 -->
+    <circle cx="295" cy="250" r="48" fill="#09090B" stroke="#3F3F46" stroke-width="2"/>
+    <circle cx="295" cy="250" r="14" fill="#18181B" stroke="#F59E0B" stroke-width="2"/>
+  </g>
+  
+  <rect x="25" y="348" width="140" height="22" rx="6" fill="#18181B" stroke="#3F3F46" stroke-width="1"/>
+  <text x="95" y="363" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="10" fill="#F59E0B" text-anchor="middle">COOLER</text>
+</svg>

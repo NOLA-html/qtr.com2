@@ -1,0 +1,6 @@
+{
+  "name": "QTR — Quick Tech Repairs",
+  "description": "Professional computer repairs, custom PC builds (Project Eclipse, NITROFORGE X3060, OVERDRIVE), and workshop appointment scheduling with Google Calendar. A service of AB Services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

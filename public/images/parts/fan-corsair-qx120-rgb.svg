@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" rx="24" fill="#0F172A"/>
+  <rect x="50" y="50" width="300" height="300" rx="16" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <text x="200" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle">CORSAIR</text>
+  <text x="200" y="220" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="14" fill="#F59E0B" text-anchor="middle">Corsair iCUE LINK QX120 RGB 120mm PWM Triple Fan Starter Kit</text>
+  <rect x="25" y="348" width="120" height="22" rx="6" fill="#18181B" stroke="#3F3F46" stroke-width="1"/>
+  <text x="85" y="363" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="10" fill="#F59E0B" text-anchor="middle">FANS</text>
+</svg>

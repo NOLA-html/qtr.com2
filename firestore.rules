@@ -1,0 +1,69 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Global Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // 2. Hardened Primitives
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Bootstrapped admin verification
+    function isAdmin() {
+      return isSignedIn() && (
+        (request.auth.token.email == 'n10a.yt@gmail.com' && request.auth.token.email_verified == true) ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // 3. Products Catalogue
+    match /products/{productId} {
+      allow read: if isValidId(productId);
+      allow create, update, delete: if isValidId(productId) && isAdmin();
+    }
+
+    // 4. Price History Audit Logs
+    match /priceHistory/{historyId} {
+      allow read: if isValidId(historyId);
+      allow create, update, delete: if isValidId(historyId) && isAdmin();
+    }
+
+    // 5. Customer Cheaper Price Requests
+    function isValidCheaperPriceSubmission(data) {
+      return data.keys().hasAll(['id', 'referenceNumber', 'customerName', 'email', 'partName', 'category', 'centreComPrice', 'competitorPrice', 'verificationOutcome', 'status'])
+        && data.id is string && data.id.size() <= 128
+        && data.customerName is string && data.customerName.size() <= 100
+        && data.email is string && data.email.size() <= 150
+        && data.partName is string && data.partName.size() <= 200
+        && data.centreComPrice is number && data.centreComPrice >= 0
+        && data.competitorPrice is number && data.competitorPrice >= 0
+        && data.status in ['pending', 'approved', 'rejected', 'more_info'];
+    }
+
+    match /cheaperPriceRequests/{requestId} {
+      allow create: if isValidId(requestId) && isValidCheaperPriceSubmission(incoming());
+      allow read, update, delete: if isValidId(requestId) && isAdmin();
+    }
+
+    // 6. Admin Accounts
+    match /admins/{adminId} {
+      allow read, write: if isValidId(adminId) && isAdmin();
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Centre Com PC component record with live AUD pricing, stock, verification timestamp, and specifications.",
+      "type": "object",
+      "properties": {
+        "productId": { "type": "string", "maxLength": 128 },
+        "manufacturer": { "type": "string", "maxLength": 100 },
+        "model": { "type": "string", "maxLength": 200 },
+        "category": { "type": "string", "maxLength": 50 },
+        "retailer": { "type": "string", "maxLength": 50, "enum": ["Centre Com"] },
+        "productUrl": { "type": "string", "maxLength": 500 },
+        "priceAUD": { "type": "number" },
+        "currency": { "type": "string", "enum": ["AUD"] },
+        "imageUrl": { "type": "string", "maxLength": 500 },
+        "specifications": { "type": "object" },
+        "status": {
+          "type": "string",
+          "enum": ["active", "stale", "unavailable", "price_check_failed", "needs_review"]
+        },
+        "lastCheckedAt": { "type": "string" },
+        "lastSuccessfulCheckAt": { "type": "string" },
+        "priceSource": { "type": "string", "enum": ["Centre Com"] },
+        "lastKnownPriceAUD": { "type": "number" },
+        "refreshAttempts": { "type": "number" },
+        "nextRefreshAt": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "lastErrorCode": { "type": "string", "maxLength": 100 }
+      },
+      "required": ["productId", "manufacturer", "model", "category", "retailer", "productUrl", "currency", "status", "priceSource"]
+    },
+    "PriceHistory": {
+      "title": "PriceHistory",
+      "description": "Historical audit log of verified Centre Com price changes and manual verifications.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "productId": { "type": "string", "maxLength": 128 },
+        "priceAUD": { "type": "number" },
+        "currency": { "type": "string", "enum": ["AUD"] },
+        "productUrl": { "type": "string", "maxLength": 500 },
+        "checkedAt": { "type": "string" },
+        "previousPriceAUD": { "type": "number" },
+        "changeType": {
+          "type": "string",
+          "enum": ["initial", "increase", "decrease", "unchanged"]
+        },
+        "verificationMethod": {
+          "type": "string",
+          "maxLength": 100
+        }
+      },
+      "required": ["id", "productId", "priceAUD", "currency", "productUrl", "checkedAt", "changeType", "verificationMethod"]
+    },
+    "CheaperPriceRequest": {
+      "title": "CheaperPriceRequest",
+      "description": "Price match review submission from customer with competitor URL and AI verification evaluation.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "referenceNumber": { "type": "string", "maxLength": 30 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "partId": { "type": "string", "maxLength": 128 },
+        "partName": { "type": "string", "maxLength": 200 },
+        "category": { "type": "string", "maxLength": 50 },
+        "centreComPrice": { "type": "number" },
+        "centreComUrl": { "type": "string", "maxLength": 500 },
+        "competitorName": { "type": "string", "maxLength": 100 },
+        "competitorUrl": { "type": "string", "maxLength": 500 },
+        "competitorPrice": { "type": "number" },
+        "priceDelta": { "type": "number" },
+        "isBrandNew": { "type": "boolean" },
+        "isInStock": { "type": "boolean" },
+        "notes": { "type": "string", "maxLength": 1000 },
+        "verificationOutcome": {
+          "type": "string",
+          "enum": ["verified", "needs_review", "rejected"]
+        },
+        "verificationReason": { "type": "string", "maxLength": 500 },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "approved", "rejected", "more_info"]
+        },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "referenceNumber", "customerName", "email", "partName", "category", "centreComPrice", "competitorPrice", "verificationOutcome", "status"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Authorized administrator user profile for QTR staff operations.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 150 },
+        "role": { "type": "string", "enum": ["admin", "superadmin"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Catalogue of PC components with verified Centre Com pricing, specifications, and availability."
+    },
+    "/priceHistory/{historyId}": {
+      "schema": { "$ref": "#/entities/PriceHistory" },
+      "description": "Audit trail of verified Centre Com price changes."
+    },
+    "/cheaperPriceRequests/{requestId}": {
+      "schema": { "$ref": "#/entities/CheaperPriceRequest" },
+      "description": "Customer submissions for price matching against authorized Australian retailers."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/Admin" },
+      "description": "Authorized staff and administrator accounts."
+    }
+  }
+}

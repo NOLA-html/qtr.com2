@@ -1,0 +1,455 @@
+{
+  "reviews": [
+    {
+      "id": "rev-damiano-2026",
+      "name": "Damiano",
+      "date": "27 August 2026",
+      "rating": 5,
+      "text": "QTR was able to diagnose the problem, recover lost data and do so when other companies engaged for the same service could not. His technical acumen and customer service were fantastic and very reassuring!",
+      "approved": true,
+      "serviceType": "Computer Repairs & Data Recovery"
+    }
+  ],
+  "repairRequests": [
+    {
+      "id": "rep-1792557250265",
+      "referenceNumber": "QTR-REP-9421",
+      "customerName": "Test Customer",
+      "email": "test.customer@example.com",
+      "deviceType": "Laptop",
+      "manufacturerAndModel": "Lenovo ThinkPad T14",
+      "operatingSystem": "Windows 11",
+      "repairCategory": "Computer Repairs",
+      "problemDescription": "Laptop screen occasionally flickers when moving the hinge and powers off randomly.",
+      "turnsOn": "Yes",
+      "importantDataAffected": "Not sure",
+      "serviceSpeed": "Regular",
+      "expressFee": 0,
+      "status": "Received",
+      "createdAt": "2026-10-21T04:34:10.265Z",
+      "updatedAt": "2026-10-21T04:34:10.265Z",
+      "technicianNotes": "Request logged into QTR repair management queue."
+    },
+    {
+      "id": "rep-sample-1",
+      "referenceNumber": "QTR-REP-1024",
+      "customerName": "Marcus Vance",
+      "email": "m.vance@example.com",
+      "phone": "0412 345 678",
+      "deviceType": "Laptop",
+      "manufacturerAndModel": "Dell XPS 15 9520",
+      "operatingSystem": "Windows 11",
+      "repairCategory": "Performance Troubleshooting",
+      "problemDescription": "Laptop thermal throttling heavily during Excel data modeling and occasionally shutting down with fan spinning at max speed.",
+      "symptoms": "Overheating, blue screen error WHEA_UNCORRECTABLE_ERROR",
+      "turnsOn": "Yes",
+      "importantDataAffected": "No",
+      "serviceSpeed": "Express",
+      "expressFee": 15,
+      "additionalNotes": "Need it ready before Friday client presentation.",
+      "status": "Assessment & Quote",
+      "createdAt": "2026-10-18T10:30:00.000Z",
+      "updatedAt": "2026-10-19T14:20:00.000Z",
+      "technicianNotes": "Thermal paste dried out, heatsink dust blockage confirmed. Cleaning and Honeywell PTM7950 repaste approved."
+    }
+  ],
+  "upgradeRequests": [
+    {
+      "id": "upg-sample-1",
+      "referenceNumber": "QTR-UPG-2048",
+      "customerName": "Sarah Jenkins",
+      "email": "sarah.j@example.com",
+      "phone": "0488 234 567",
+      "deviceType": "Desktop PC",
+      "manufacturerAndModel": "Custom Intel i5-10400 Desktop",
+      "currentSpecifications": "Intel i5-10400, 16GB DDR4 RAM, 500GB SATA SSD, GTX 1660 Super, 550W PSU",
+      "desiredUpgrades": [
+        "RAM Upgrade",
+        "SSD / Storage Upgrade",
+        "Graphics Card"
+      ],
+      "intendedUse": "Video Editing & 1440p Gaming",
+      "budget": "$500–$800",
+      "serviceSpeed": "Regular",
+      "expressFee": 0,
+      "additionalNotes": "Looking to edit 4K DaVinci Resolve footage smoothly.",
+      "status": "Under Review",
+      "createdAt": "2026-10-19T09:15:00.000Z",
+      "updatedAt": "2026-10-19T09:15:00.000Z",
+      "technicianNotes": "Recommended: 32GB 3200MHz RAM kit, 2TB Crucial T500 Gen4 NVMe, RTX 4060 8GB."
+    }
+  ],
+  "customPcQuotes": [],
+  "contactMessages": [],
+  "pcOrders": [
+    {
+      "id": "ord-1792630096778-0cj8",
+      "referenceNumber": "QTR-ORD-1676",
+      "customerName": "Sarah Connor",
+      "email": "sarah@example.com",
+      "phone": "0411222333",
+      "shippingAddress": {
+        "addressLine1": "42 High Street",
+        "suburb": "Caulfield",
+        "state": "VIC",
+        "postcode": "3162"
+      },
+      "pcId": "nitroforge-x3060",
+      "pcName": "NITROFORGE X3060",
+      "pcBasePrice": 2015,
+      "components": [
+        {
+          "name": "AMD Ryzen 5 7500X3D, 6 cores / 12 threads, listed at 4.2 GHz",
+          "category": "CPU",
+          "price": 397
+        },
+        {
+          "name": "Palit GeForce RTX 3060 Infinity 2 OC 12GB GDDR6",
+          "category": "GPU",
+          "price": 539
+        },
+        {
+          "name": "Patriot Viper Venom 16GB (1 × 16GB) DDR5-6000 CL30",
+          "category": "RAM",
+          "price": 379
+        },
+        {
+          "name": "Sapphire NITRO+ B850M Wi-Fi 6, AM5 DDR5 Micro-ATX",
+          "category": "Motherboard",
+          "price": 179
+        },
+        {
+          "name": "Biwin Black Opal NV3500 512GB PCIe Gen 3 M.2",
+          "category": "SSD",
+          "price": 99
+        },
+        {
+          "name": "Montech NX600 ARGB dual-tower cooler, six heat pipes",
+          "category": "CPU Cooler",
+          "price": 55
+        },
+        {
+          "name": "OKINOS AQUA UNO Zebra Micro-ATX, tempered glass, three ARGB fans and USB-C",
+          "category": "Case",
+          "price": 59
+        },
+        {
+          "name": "Antec GSK850 V2 AU 850W 80+ Gold, fully modular, ATX 3.1",
+          "category": "PSU",
+          "price": 129
+        },
+        {
+          "name": "Microsoft Windows 11 Home OEM 64-bit",
+          "category": "Operating System",
+          "price": 179
+        }
+      ],
+      "buildService": {
+        "id": "full",
+        "name": "Full Build & Setup",
+        "price": 250,
+        "description": "Complete professional assembly, cable management, Windows installation, driver setup, and comprehensive stress testing."
+      },
+      "subtotalBeforeDelivery": 2265,
+      "deliveryMethod": {
+        "id": "express",
+        "name": "Express Delivery",
+        "price": 49,
+        "timeframe": "1–2 business days"
+      },
+      "finalTotal": 2314,
+      "paymentMethod": "card",
+      "status": "Order Placed",
+      "createdAt": "2026-10-22T00:48:16.778Z",
+      "updatedAt": "2026-10-22T00:48:16.778Z",
+      "technicianNotes": "Order placed online. Parts & Windows: $2015.00, Build Service: $250.00, Delivery: $49.00. Total: $2314.00."
+    },
+    {
+      "id": "ord-1792630001372-67hk",
+      "referenceNumber": "QTR-ORD-7326",
+      "customerName": "Test Customer",
+      "email": "test@example.com",
+      "phone": "0412345678",
+      "shippingAddress": {
+        "addressLine1": "100 Flinders St",
+        "suburb": "Melbourne",
+        "state": "VIC",
+        "postcode": "3000"
+      },
+      "pcId": "project-eclipse",
+      "pcName": "Project Eclipse",
+      "pcBasePrice": 1428,
+      "components": [
+        {
+          "name": "AMD Ryzen 5 5600X, 6 cores / 12 threads",
+          "category": "CPU",
+          "price": 199
+        },
+        {
+          "name": "AMD Wraith Stealth, included with CPU",
+          "category": "CPU Cooler",
+          "price": 0,
+          "included": true
+        },
+        {
+          "name": "ASUS Prime B550M-A WiFi II AM4 Micro-ATX",
+          "category": "Motherboard",
+          "price": 129
+        },
+        {
+          "name": "ASUS Dual GeForce RTX 5050 8GB OC GDDR6",
+          "category": "GPU",
+          "price": 499
+        },
+        {
+          "name": "G.Skill Trident Z RGB 16GB (2 × 8GB) DDR4-3600 CL16",
+          "category": "RAM",
+          "price": 199
+        },
+        {
+          "name": "Biwin Black Opal NV3500 512GB PCIe Gen 3 M.2",
+          "category": "SSD",
+          "price": 99
+        },
+        {
+          "name": "Deepcool Matrexx 30 Tempered Glass Micro-ATX",
+          "category": "Case",
+          "price": 45
+        },
+        {
+          "name": "ASUS Prime 750W 80+ Bronze",
+          "category": "PSU",
+          "price": 79
+        },
+        {
+          "name": "Microsoft Windows 11 Home OEM 64-bit",
+          "category": "Operating System",
+          "price": 179
+        }
+      ],
+      "buildService": {
+        "id": "fast",
+        "name": "Fast Build",
+        "price": 100,
+        "description": "PC is assembled and receives a basic POST test only."
+      },
+      "subtotalBeforeDelivery": 1528,
+      "deliveryMethod": {
+        "id": "normal",
+        "name": "Normal Delivery",
+        "price": 25,
+        "timeframe": "3–5 business days"
+      },
+      "finalTotal": 1553,
+      "paymentMethod": "card",
+      "status": "Order Placed",
+      "createdAt": "2026-10-22T00:46:41.372Z",
+      "updatedAt": "2026-10-22T00:46:41.372Z",
+      "technicianNotes": "Order placed online. Parts & Windows: $1428.00, Build Service: $100.00, Delivery: $25.00. Total: $1553.00."
+    },
+    {
+      "id": "ord-sample-1",
+      "referenceNumber": "QTR-ORD-5120",
+      "customerName": "Marcus Vance",
+      "email": "m.vance@example.com",
+      "phone": "0412 345 678",
+      "shippingAddress": {
+        "addressLine1": "42 Glenhuntly Rd",
+        "suburb": "Elsternwick",
+        "state": "VIC",
+        "postcode": "3185"
+      },
+      "pcId": "project-eclipse",
+      "pcName": "Project Eclipse",
+      "pcBasePrice": 1428,
+      "components": [
+        {
+          "name": "AMD Ryzen 5 5600X, 6 cores / 12 threads",
+          "category": "CPU",
+          "price": 199
+        },
+        {
+          "name": "AMD Wraith Stealth, included with CPU",
+          "category": "CPU Cooler",
+          "price": 0,
+          "included": true
+        },
+        {
+          "name": "ASUS Prime B550M-A WiFi II AM4 Micro-ATX",
+          "category": "Motherboard",
+          "price": 129
+        },
+        {
+          "name": "ASUS Dual GeForce RTX 5050 8GB OC GDDR6",
+          "category": "GPU",
+          "price": 499
+        },
+        {
+          "name": "G.Skill Trident Z RGB 16GB (2 × 8GB) DDR4-3600 CL16",
+          "category": "RAM",
+          "price": 199
+        },
+        {
+          "name": "Biwin Black Opal NV3500 512GB PCIe Gen 3 M.2",
+          "category": "SSD",
+          "price": 99
+        },
+        {
+          "name": "Deepcool Matrexx 30 Tempered Glass Micro-ATX",
+          "category": "Case",
+          "price": 45
+        },
+        {
+          "name": "ASUS Prime 750W 80+ Bronze",
+          "category": "PSU",
+          "price": 79
+        },
+        {
+          "name": "Microsoft Windows 11 Home OEM 64-bit",
+          "category": "Operating System",
+          "price": 179
+        }
+      ],
+      "buildService": {
+        "id": "fast",
+        "name": "Fast Build",
+        "price": 100,
+        "description": "PC is assembled and receives a basic POST test only."
+      },
+      "subtotalBeforeDelivery": 1528,
+      "deliveryMethod": {
+        "id": "normal",
+        "name": "Normal Delivery",
+        "price": 25,
+        "timeframe": "3–5 business days"
+      },
+      "finalTotal": 1553,
+      "paymentMethod": "card",
+      "status": "Parts Prepared",
+      "createdAt": "2026-10-20T11:00:00.000Z",
+      "updatedAt": "2026-10-20T14:30:00.000Z",
+      "technicianNotes": "All components checked from inventory. Ready for bench assembly."
+    }
+  ],
+  "shippingConfig": {
+    "normalPrice": 25,
+    "normalTimeframe": "3–5 business days",
+    "expressPrice": 49,
+    "expressTimeframe": "1–2 business days"
+  },
+  "cheaperPriceRequests": [
+    {
+      "id": "cpr-1793153194378-s0ov",
+      "referenceNumber": "QTR-CPR-7249",
+      "customerName": "Marcus Vance",
+      "email": "marcus@example.com",
+      "partId": "mb-asus-b850m-e",
+      "partName": "ASUS TUF Gaming B850M-E WIFI",
+      "category": "motherboard",
+      "centreComPrice": 209,
+      "centreComUrl": "https://www.centrecom.com.au/asus-tuf-gaming-b850m-e-wifi",
+      "competitorName": "scorptec.com.au",
+      "competitorUrl": "https://www.scorptec.com.au/product/motherboards/amd-socket-am5/108920-tuf-gaming-b850m-e-wifi",
+      "competitorPrice": 195,
+      "priceDelta": 14,
+      "isBrandNew": true,
+      "isInStock": true,
+      "verificationOutcome": "verified",
+      "verificationReason": "Cheaper price verified — eligible for review.",
+      "status": "pending",
+      "createdAt": "2026-10-28T02:06:34.378Z",
+      "updatedAt": "2026-10-28T02:06:34.378Z"
+    },
+    {
+      "id": "cpr-1793153171902-097i",
+      "referenceNumber": "QTR-CPR-6352",
+      "customerName": "Test Shopper",
+      "email": "test@example.com",
+      "partId": "mb-asus-b850m-e",
+      "partName": "ASUS TUF Gaming B850M-E WIFI",
+      "category": "motherboard",
+      "centreComPrice": 209,
+      "centreComUrl": "https://www.centrecom.com.au/asus-tuf-gaming-b850m-e-wifi",
+      "competitorName": "Amazon / Amazon Marketplace (Excluded)",
+      "competitorUrl": "https://www.amazon.com.au/dp/B00EXAMPLE",
+      "competitorPrice": 185,
+      "priceDelta": 24,
+      "isBrandNew": true,
+      "isInStock": true,
+      "verificationOutcome": "rejected",
+      "verificationReason": "This price cannot be accepted because Amazon and Amazon Marketplace listings do not meet our official price verification and warranty requirements.",
+      "status": "rejected",
+      "createdAt": "2026-10-28T02:06:11.902Z",
+      "updatedAt": "2026-10-28T02:06:11.902Z"
+    },
+    {
+      "id": "cpr-sample-1",
+      "referenceNumber": "QTR-CPR-4091",
+      "customerName": "Marcus Vance",
+      "email": "m.vance@example.com",
+      "phone": "0412 345 678",
+      "partId": "cpu-r7-7800x3d",
+      "partName": "AMD Ryzen 7 7800X3D",
+      "category": "cpu",
+      "centreComPrice": 599,
+      "centreComUrl": "https://www.centrecom.com.au/amd-ryzen-7-7800x3d-8-core-16-threads-processor",
+      "competitorName": "Scorptec",
+      "competitorUrl": "https://www.scorptec.com.au/product/cpu/amd-socket-am5/102521-100-100000910wof",
+      "competitorPrice": 579,
+      "priceDelta": 20,
+      "isBrandNew": true,
+      "isInStock": true,
+      "notes": "In stock at South Melbourne Scorptec branch.",
+      "verificationOutcome": "verified",
+      "verificationReason": "Cheaper price verified against authorized Australian retailer — eligible for review.",
+      "status": "pending",
+      "createdAt": "2026-10-21T09:30:00.000Z",
+      "updatedAt": "2026-10-21T09:30:00.000Z"
+    }
+  ],
+  "customerSuppliedMotherboards": [
+    {
+      "id": "csm-1793313729487-xrir",
+      "referenceNumber": "QTR-MB-8802",
+      "sourceType": "custom_entry",
+      "brand": "ASUS",
+      "model": "TUF GAMING B650-PLUS WIFI",
+      "productUrl": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650-plus-wifi/",
+      "researchedSpecs": {
+        "brand": "ASUS",
+        "model": "TUF GAMING B650-PLUS WIFI",
+        "socket": "AM5",
+        "chipset": "AMD B650",
+        "ramType": "DDR5",
+        "formFactor": "ATX",
+        "memorySlots": 4,
+        "maxMemoryGb": 192,
+        "m2Slots": 3,
+        "sataPorts": 4,
+        "pcieX16Slots": 2,
+        "biosRequirements": "Standard manufacturer UEFI BIOS",
+        "supportedGenerations": [
+          "Ryzen 7000",
+          "Ryzen 8000",
+          "Ryzen 9000"
+        ],
+        "officialSourceUrl": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650-plus-wifi/",
+        "sourcesUsed": [
+          "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650-plus-wifi/techspec/"
+        ],
+        "identified": true,
+        "notes": "Verified directly against official manufacturer technical documentation."
+      },
+      "researchStatus": "verified",
+      "compatibilityStatus": "compatible",
+      "compatibilityNotes": [
+        "[PASS] Socket: Motherboard socket is AM5. (No CPU currently selected in build checklist)."
+      ],
+      "currentBuildSummary": {},
+      "adminStatus": "inspection_passed",
+      "createdAt": "2026-10-29T22:42:09.487Z",
+      "updatedAt": "2026-10-29T22:44:05.463Z",
+      "adminNotes": "Socket pins verified under microscope. Clean POST on bench."
+    }
+  ]
+}
